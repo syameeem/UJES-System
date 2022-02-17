@@ -1,6 +1,5 @@
 package ujes.controller;
 
-
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -10,23 +9,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ujes.dao.AdminDAO;
+import ujes.dao.CategoryDAO;
 
-@WebServlet("/DeleteAdmin")
-public class DeleteAdmin extends HttpServlet {
+/**
+ * Servlet implementation class DeleteCategory
+ */
+@WebServlet("/DeleteCategory")
+public class DeleteCategory extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       private AdminDAO dao;
-    public DeleteAdmin() {
+	private CategoryDAO dao;
+    
+    public DeleteCategory() {
         super();
-        dao = new AdminDAO();
+        dao = new CategoryDAO();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int aID = Integer.parseInt(request.getParameter("aID"));
-		dao.deleteAdmin(aID);
+		int cID = Integer.parseInt(request.getParameter("cID"));
+		dao.deleteCategory(cID);
 
-        request.setAttribute("admin", AdminDAO.getAllAdmin());
-		RequestDispatcher view = request.getRequestDispatcher("adminList.jsp");
+        request.setAttribute("category", CategoryDAO.getAllCategory());
+		RequestDispatcher view = request.getRequestDispatcher("category.jsp");
 		view.forward(request, response);
 	}
 }
