@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
 <!-- SERVLET FOR RETRIEVE CATEGORY -->
+<%@page import="ujes.db.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -10,16 +11,7 @@
 <%
 String pID = request.getParameter("pID");
 String bID = request.getParameter("bID");
-String driver = "oracle.jdbc.driver.OracleDriver";
-String connectionUrl = "jdbc:oracle:thin:@localhost:1521:xe";
-String userid = "db_gryffindor";
-String password = "system";
 
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
 %>    
 <!-- END SERVLET FOR RETRIEVE CATEGORY -->   
   
