@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
 <!-- SERVLET FOR RETRIEVE CATEGORY -->
+<%@page import="ujes.db.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -9,15 +10,7 @@
 <%
 String cID = request.getParameter("cID");
 String bID = request.getParameter("bID");
-String driver = "oracle.jdbc.driver.OracleDriver";
-String connectionUrl = "jdbc:oracle:thin:@localhost:1521:xe";
-String userid = "db_gryffindor";
-String password = "system";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
+
 Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
@@ -60,7 +53,7 @@ ResultSet resultSet = null;
   		<table class="center">
     	<%
 		try{
-		connection = DriverManager.getConnection(connectionUrl, userid, password);
+		connection = ConnectionManager.getConnection();
 		statement=connection.createStatement();
 		String sql ="select * from category";
 		resultSet = statement.executeQuery(sql);
@@ -88,7 +81,7 @@ ResultSet resultSet = null;
   		<table class="center">
     	<%
 		try{
-		connection = DriverManager.getConnection(connectionUrl, userid, password);
+		connection = ConnectionManager.getConnection();
 		statement=connection.createStatement();
 		String sql ="select * from product";
 		resultSet = statement.executeQuery(sql);
