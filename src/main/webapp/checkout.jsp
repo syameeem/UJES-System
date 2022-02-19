@@ -22,11 +22,7 @@ e.printStackTrace();
 }
 %>    
 <!-- END SERVLET FOR RETRIEVE CATEGORY -->   
-     <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
+  
 <!DOCTYPE html>
 <html>
 <head>
