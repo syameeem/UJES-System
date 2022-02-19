@@ -3,21 +3,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!-- SERVLET FOR RETRIEVE BUYER -->
+<%@page import="ujes.db.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+
 <%
 String bID = request.getParameter("bID");
-String driver = "oracle.jdbc.driver.OracleDriver";
-String connectionUrl = "jdbc:oracle:thin:@localhost:1521:xe";
-String userid = "db_gryffindor";
-String password = "system";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
+
 Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
