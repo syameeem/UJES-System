@@ -56,7 +56,7 @@ ResultSet resultSet = null;
 	<table style="width:80%; border: 1px solid black; border-collapse: collapse;">
 	<%
 		try{
-		connection = DriverManager.getConnection(connectionUrl, userid, password);
+		connection = ConnectionManager.getConnection();
 		statement=connection.createStatement();
 		String sql ="select * from category";
 		resultSet = statement.executeQuery(sql);
