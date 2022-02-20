@@ -197,7 +197,7 @@ h1{
 			
 		<input type="hidden" name="pPrice" value="<%=resultSet.getString("pPrice") %>">
 		<input type="hidden" name="pID" value="<%=resultSet.getString("pID") %>">
-		<input type="hidden" name="bID" value="1">
+		<input type="hidden" name="bID" value="<%=resultSet.getString("pID") %>">
             <%
 			}
 			con.close();
@@ -211,8 +211,8 @@ h1{
             <form action="orderController" class="form-container">
                 <h2>Insert detail</h2>
 
-                <label for="quantity"><b>Quantity</b></label>
-                <input type="number" name="quantity" required>
+                <label for="qty"><b>Quantity</b></label>
+                <input type="number" name="qty" required>
 
                 <button type="submit" class="btn">Buy Now</button>
 		
