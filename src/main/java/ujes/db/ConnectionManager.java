@@ -18,7 +18,7 @@ public class ConnectionManager {
 			
 			try {
 				//create connection
-				con = DriverManager.getConnection(DB_CONNECTION,DB_USER,DB_PASSWORD);
+				con = DriverManager.getConnection("jdbc:postgresql://ec2-54-209-221-231.compute-1.amazonaws.com:5432/de2ejfdl93uqof","ihawdciqkgdspx","d0a32ddb478ecf1390eb0b275d3ed8278804864c252d4b8c6eb2faebd733a514");
 				System.out.println("Connected");
 			}catch(SQLException e) {
 				e.printStackTrace();
