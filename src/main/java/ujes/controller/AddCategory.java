@@ -53,7 +53,6 @@ public class AddCategory extends HttpServlet {
 			e.printStackTrace();
 		}
 		//*************
-		
 		Category d = new Category();
 		d.setcName(request.getParameter("cName"));
 		d.setcPics(imageFileName);
