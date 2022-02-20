@@ -193,7 +193,7 @@ h1{
 				<td><b><%=resultSet.getString("pName") %></b><br>
 				Category: <%=resultSet.getString("cName") %><br>
 				Description: <%=resultSet.getString("pDesc") %><br>
-				Price: RM <%=resultSet.getDouble("pPrice") %>
+				Price: RM <%=resultSet.getDouble("pPrice") %><br><br>
 			</td>
 			<td><button><a href="product-buyer.jsp?pID=<%=resultSet.getString("pID")%>">View</a></button></td>
 		</tr>
