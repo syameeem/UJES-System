@@ -24,8 +24,6 @@ public class UpdateCategory extends HttpServlet {
         super();
         dao = new CategoryDAO();
     }
-
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("cID"));
     	request.setAttribute("c", CategoryDAO.getCategoryById(id));
@@ -59,7 +57,6 @@ public class UpdateCategory extends HttpServlet {
 					e.printStackTrace();
 				}
 				//*************
-		
 		Category d = new Category();
 		d.setcID(Integer.parseInt(request.getParameter("cID")));
 		d.setcName(request.getParameter("cName"));
