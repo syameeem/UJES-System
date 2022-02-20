@@ -13,8 +13,9 @@ public class SellerDAO {
 	static ResultSet rs = null; 
 	static PreparedStatement ps=null;
 	static Statement stmt=null;
-	static String sName, spassw, sEmail,shopName,accNo;
+	static String sName, spassw, sEmail,shopName;
 	static int sID,aID;
+	static long accNo;
 	
 	//method for login
 		public static Seller login(Seller bean) throws NoSuchAlgorithmException{
@@ -101,7 +102,7 @@ public class SellerDAO {
 				ps.setString(2,shopName);
 				ps.setString(3,spassw);
 				ps.setString(4,sEmail);
-				ps.setString(5,accNo);
+				ps.setLong(5,accNo);
 				//4. execute query
 				ps.executeUpdate();			
 				
