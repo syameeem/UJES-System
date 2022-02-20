@@ -9,7 +9,7 @@
 		Connection conn = ConnectionManager.getConnection();
 		Statement st = conn.createStatement();
 		int i=st.executeUpdate("DELETE FROM review WHERE fID="+fID);
-    	response.sendRedirect("deleteReview.jsp");
+    	response.sendRedirect("viewReview.jsp");
 	}
 	catch(Exception e)
 	{
