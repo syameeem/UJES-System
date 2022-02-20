@@ -11,7 +11,7 @@ import ujes.model.Buyer;
 /**
  * Servlet implementation class LoginLogoutController
  */
-@WebServlet("/this_LoginBuyer")
+@WebServlet("/LoginBuyer")
 public class LoginBuyer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private BuyerDAO dao;
