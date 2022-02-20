@@ -193,6 +193,7 @@ h1{
 				Description: <%=resultSet.getString("pDesc") %><br>
 				Price: RM <%=resultSet.getDouble("pPrice") %>
 			</td>
+			<td><button><a href="viewOrderCopy.jsp?pID=<%=resultSet.getString("pID")%>">View</a></button></td>
 		</tr>
 		<%
 		}
