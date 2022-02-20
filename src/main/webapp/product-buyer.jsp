@@ -179,7 +179,9 @@ h1{
 		</div>
 	 </div>
 	</div><br>
+	
 	<h1>PRODUCT</h1>
+	<form action="orderController" class="form-container">
 	        <div id="backprod">
             <h1><%=rs.getString("pName") %></h1>
             <hr>
@@ -192,6 +194,10 @@ h1{
             <p>Description: <label for="pDesc"><%=rs.getString("pDesc") %></label><br><br></p>
 			
             <button onclick="openForm()" id="buybtn">Buy Now</button>
+			
+		<input type="hidden" name="pPrice" value="<%=resultSet.getString("pPrice") %>">
+		<input type="hidden" name="pID" value="<%=resultSet.getString("pID") %>">
+		<input type="hidden" name="bID" value="1">
             <%
 			}
 			con.close();
@@ -202,13 +208,14 @@ h1{
         </div>
         
             <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
+            <form action="orderController" class="form-container">
                 <h2>Insert detail</h2>
 
                 <label for="quantity"><b>Quantity</b></label>
                 <input type="number" name="quantity" required>
 
                 <button type="submit" class="btn">Buy Now</button>
+		
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </form>
             </div>
