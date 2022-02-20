@@ -71,13 +71,14 @@ ResultSet resultSet = null;
 		while(resultSet.next()){
 	%>
 		<tr>
-		<td colspan=2><img src="/images<%=resultSet.getString("pPics")%>"></td>
-		<td><%=resultSet.getString("fID") %></td>
+		
+		<td><%=resultSet.getString("bID") %></td>
 		</tr>
 		<tr>
 		<td></td>
-		<td><%=resultSet.getString("bID") %></td>
-		<td><%=resultSet.getString("pID") %></td>
+		<td><%=resultSet.getString("pComment") %></td>
+		<td><%=resultSet.getString("pRate") %></td>
+		<td colspan=2><img src="/images<%=resultSet.getString("pImage")%>"></td>
 		</tr>
 		<tr>
 		<td></td>
