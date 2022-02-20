@@ -64,7 +64,7 @@
 		<iframe class="frame"></iframe>
 	</div>
 <div class="centered">
-	<form action="LoginAdmin" method="post">
+	<form action="LoginAdmin.java" method="post">
 	<h3  class="memberLogin" align="center">ADMIN LOGIN</h3>
 
 	<div data-validate="Valid email is required: ex@abc.xyz">
