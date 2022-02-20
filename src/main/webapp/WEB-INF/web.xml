@@ -9,4 +9,22 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+<servlet>
+	<servlet-name>LoginBuyer</servlet-name>
+	<servlet-class>LoginBuyer</servlet-class>
+  </servlet>
+<servlet-mapping>
+	<servlet-name>LoginBuyer</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>RegisterBuyer</servlet-name>
+	<servlet-class>RegisterBuyer</servlet-class>
+  </servlet>
+<servlet-mapping>
+	<servlet-name>RegisterBuyer</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+
 </web-app>
